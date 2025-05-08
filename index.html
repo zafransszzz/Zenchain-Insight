@@ -2,110 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZenChain Blog</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #0d1b2a;
-      color: #f4f4f4;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #14213d;
       padding: 20px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #1f2a3e;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1, h2, h3 {
-      color: #fff;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 36px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    button {
-      padding: 10px 15px;
-      background: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background: #45a049;
-    }
-
-    .post {
-      border-bottom: 1px solid #ddd;
-      padding: 20px 0;
-    }
-
-    .wallet {
-      margin: 20px 0;
       text-align: center;
     }
 
-    a {
-      color: #4CAF50;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fca311;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .section {
+      background-color: #1f2a3e;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section h3 {
+      color: #fca311;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #14213d;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>ZenChain Blog</h1>
-    <p>ZenChain is revolutionizing the blockchain space with a fast, scalable, and developer-friendly platform designed to empower Web3 creators. This blog shares updates, tutorials, and insights into building on ZenChain.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="https://docs.zenchain.io/" target="_blank">Docs</a>
+      <a href="https://zafransszzz.github.io/web3-clone/">DApp</a>
+    </nav>
+  </header>
 
-    <div class="wallet">
-      <button onclick="connectWallet()">Connect Wallet</button>
-      <p id="walletAddress">Wallet: Not connected</p>
-    </div>
+  <section class="hero">
+    <h2>Stories and Insights from Building on ZenChain</h2>
+    <p>Follow along as we explore how to build decentralized applications on ZenChain — from NFTs to scaling Web3 ideas.</p>
+  </section>
 
-    <h2>Latest Posts</h2>
+  <section class="section" id="about">
+    <h3>About ZenChain</h3>
+    <p>ZenChain is a next-gen blockchain focused on speed, low fees, and user-friendly tools for developers and creators alike.</p>
+  </section>
 
-    <div class="post">
-      <h3>How ZenChain Makes Blockchain Accessible for Creators</h3>
-      <p>ZenChain provides a seamless experience for developers, offering fast transactions and low fees. This article dives into how it simplifies building decentralized applications (DApps) and NFTs.</p>
-      <a href="https://zafransszzz.github.io/web3-clone/" target="_blank">Explore My DApp</a>
-    </div>
+  <section class="section">
+    <h3>Developer Journey</h3>
+    <p>Started with no coding skills, now deploying DApps and NFTs with MetaMask, IPFS, and ZenChain. Check out the process in my first project!</p>
+    <a href="https://zafransszzz.github.io/web3-clone/" target="_blank" style="color:#fca311;">Explore the DApp</a>
+  </section>
 
-    <div class="post">
-      <h3>What Makes ZenChain Unique?</h3>
-      <p>ZenChain stands out for its scalability, low gas fees, and strong developer ecosystem. Find out how it's designed for the next generation of decentralized applications.</p>
-      <a href="https://docs.zenchain.io/" target="_blank">Read ZenChain Docs</a>
-    </div>
-  </div>
-
-  <script>
-    async function connectWallet() {
-      if (typeof window.ethereum !== 'undefined') {
-        try {
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          document.getElementById('walletAddress').innerText = 'Wallet: ' + accounts[0];
-        } catch (err) {
-          alert('Connection denied.');
-        }
-      } else {
-        alert('MetaMask not found. Please install it.');
-      }
-    }
-  </script>
+  <footer>
+    &copy; 2025 ZenChain Blog — Built by Zafransszzz
+  </footer>
 </body>
-  </html>
+</html>
