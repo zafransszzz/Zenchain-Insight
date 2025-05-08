@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1b2a;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b);
       color: #ffffff;
     }
 
@@ -16,11 +16,17 @@
       background-color: #14213d;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+    }
+
+    header img {
+      width: 60px; /* Ukuran logo lebih besar */
+      vertical-align: middle;
     }
 
     nav {
@@ -36,9 +42,14 @@
       font-weight: bold;
     }
 
-    .hero {
+    .hero, .section {
+      background-color: rgba(20, 33, 61, 0.8);
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
       text-align: center;
-      padding: 60px 20px;
     }
 
     .hero h2 {
@@ -52,15 +63,14 @@
       margin: auto;
     }
 
-    .section {
-      background-color: #1f2a3e;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
     .section h3 {
       color: #fca311;
       margin-bottom: 15px;
+    }
+
+    .section a {
+      color: #fca311;
+      text-decoration: underline;
     }
 
     footer {
@@ -74,6 +84,8 @@
 </head>
 <body>
   <header>
+    <!-- Logo ZenChain -->
+    <img src="https://zenchain.io/assets/img/logo-light.svg" alt="ZenChain Logo" />
     <h1>ZenChain Blog</h1>
     <nav>
       <a href="#about">About</a>
@@ -95,7 +107,23 @@
   <section class="section">
     <h3>Developer Journey</h3>
     <p>Started with no coding skills, now deploying DApps and NFTs with MetaMask, IPFS, and ZenChain. Check out the process in my first project!</p>
-    <a href="https://zafransszzz.github.io/web3-clone/" target="_blank" style="color:#fca311;">Explore the DApp</a>
+    <a href="https://zafransszzz.github.io/web3-clone/" target="_blank">Explore the DApp</a>
+  </section>
+
+  <section class="section">
+    <h3>Our Vision</h3>
+    <p>To create a fast, inclusive, and affordable Web3 future — where anyone can build and innovate without limits.</p>
+  </section>
+
+  <section class="section">
+    <h3>Our Mission</h3>
+    <p>ZenChain is committed to providing a fast, decentralized, and low-cost blockchain infrastructure. We empower developers and creators with user-friendly tools and foster an open, collaborative Web3 ecosystem.</p>
+  </section>
+
+  <section class="section">
+    <h3>How to Join the Movement</h3>
+    <p>Be part of the ZenChain community! Follow <a href="https://x.com/Zen_chain" target="_blank">@Zen_chain</a> on X, and join our <a href="https://discord.gg/zenchain" target="_blank">Discord</a> to collaborate, learn, and earn XP through quests and contests.</p>
+    <p>To get started with ZenQuest and join the movement, use my referral link to sign up: <a href="https://zenquest.zenchain.io?referral=Xt81EXFysqn730NeXr-so8J_pXiloBk3eEB_edepr80" target="_blank">Join ZenQuest</a></p>
   </section>
 
   <footer>
